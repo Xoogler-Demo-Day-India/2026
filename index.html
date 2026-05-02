@@ -1,0 +1,2211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xoogler Demo Day · Bangalore · June 25, 2026</title>
+  <meta name="description"
+    content="Xoogler Demo Day Bangalore: An exclusive event featuring elite ex-Google founders pitching to top-tier investors. Join us on June 25, 2026, at Google Ananta." />
+  <link rel="canonical" href="https://xooglerdemoday.github.io" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xooglerdemoday.github.io" />
+  <meta property="og:title" content="Xoogler Demo Day · Bangalore · June 25, 2026" />
+  <meta property="og:description"
+    content="Elite Xoogler-led startups. Top-tier funds. One high-signal afternoon at Google Ananta." />
+  <meta property="og:image" content="https://xooglerdemoday.github.io/xoogler%20demo%20day%20poster.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://xooglerdemoday.github.io" />
+  <meta property="twitter:title" content="Xoogler Demo Day · Bangalore · June 25, 2026" />
+  <meta property="twitter:description"
+    content="Elite Xoogler-led startups. Top-tier funds. One high-signal afternoon at Google Ananta." />
+  <meta property="twitter:image" content="https://xooglerdemoday.github.io/xoogler%20demo%20day%20poster.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <template id="__bundler_thumbnail" data-bg-color="#fafaf7">
+    <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="800" fill="#fafaf7" />
+      <g transform="translate(360 290)">
+        <circle cx="0" cy="0" r="42" fill="#4a86e8" />
+        <circle cx="110" cy="0" r="42" fill="#e06666" />
+        <circle cx="0" cy="110" r="42" fill="#f1c232" />
+        <circle cx="110" cy="110" r="42" fill="#6aa84f" />
+      </g>
+      <text x="600" y="520" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="56"
+        font-weight="600" fill="#1a1f2e" letter-spacing="-1.5">Xoogler Demo Day</text>
+      <text x="600" y="580" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22"
+        fill="#6b7280" letter-spacing="3">BANGALORE · JUNE 25, 2026</text>
+    </svg>
+  </template>
+  <style>
+    /* ---------- tokens ---------- */
+    :root {
+      --bg: oklch(0.985 0.004 95);
+      --bg-soft: oklch(0.965 0.005 95);
+      --bg-deep: oklch(0.18 0.012 250);
+      --ink: oklch(0.18 0.012 250);
+      --ink-2: oklch(0.36 0.010 250);
+      --ink-3: oklch(0.55 0.008 250);
+      --line: oklch(0.90 0.006 250);
+      --line-2: oklch(0.82 0.008 250);
+
+      /* muted nods to Google's four — not the actual hex */
+      --c-blue: oklch(0.62 0.16 250);
+      --c-red: oklch(0.63 0.18 25);
+      --c-amber: oklch(0.78 0.14 80);
+      --c-green: oklch(0.65 0.14 150);
+
+      --max: 1180px;
+      --gap: clamp(16px, 2vw, 28px);
+      --radius: 4px;
+      --radius-lg: 10px;
+
+      --font-sans: 'Inter', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- sticky header ---------- */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: color-mix(in oklab, var(--bg) 88%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      grid-template-columns: 6px 6px;
+      gap: 2px;
+    }
+
+    .brand-mark span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .brand-mark span:nth-child(1) {
+      background: var(--c-blue);
+    }
+
+    .brand-mark span:nth-child(2) {
+      background: var(--c-red);
+    }
+
+    .brand-mark span:nth-child(3) {
+      background: var(--c-amber);
+    }
+
+    .brand-mark span:nth-child(4) {
+      background: var(--c-green);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      color: var(--ink-2);
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 10px;
+    }
+
+    @media (max-width: 820px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: background 120ms ease, color 120ms ease, border-color 120ms ease, transform 120ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-solid {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .btn-solid:hover {
+      background: oklch(0.10 0.012 250);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line-2);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--ink);
+    }
+
+    .btn-lg {
+      padding: 14px 22px;
+      font-size: 15px;
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      padding: clamp(56px, 9vw, 110px) 0 clamp(56px, 8vw, 96px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .eyebrow .bar {
+      width: 24px;
+      height: 1px;
+      background: var(--ink-3);
+    }
+
+    h1.headline {
+      margin: 18px 0 18px;
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      font-weight: 600;
+      text-wrap: balance;
+    }
+
+    h1.headline em {
+      font-style: normal;
+      background: linear-gradient(90deg, var(--c-blue), var(--c-green));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lede {
+      font-size: clamp(17px, 1.4vw, 19px);
+      color: var(--ink-2);
+      max-width: 52ch;
+      line-height: 1.55;
+      margin: 0 0 28px;
+      text-wrap: pretty;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 32px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--ink-2);
+      background: var(--bg);
+    }
+
+    .pill .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .pill.pill-date .dot {
+      background: var(--c-blue);
+    }
+
+    .pill.pill-time .dot {
+      background: var(--c-amber);
+    }
+
+    .pill.pill-place .dot {
+      background: var(--c-green);
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-aside-note {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--ink-3);
+    }
+
+    .hero-aside-note a {
+      border-bottom: 1px solid var(--line-2);
+    }
+
+    .hero-aside-note a:hover {
+      border-color: var(--ink);
+      color: var(--ink);
+    }
+
+    /* ---------- event card (right side of hero) ---------- */
+    .event-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--bg);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 18%, color-mix(in oklab, var(--c-blue) 14%, transparent), transparent 38%),
+        radial-gradient(circle at 80% 28%, color-mix(in oklab, var(--c-red) 11%, transparent), transparent 36%),
+        radial-gradient(circle at 78% 78%, color-mix(in oklab, var(--c-amber) 12%, transparent), transparent 38%),
+        radial-gradient(circle at 22% 82%, color-mix(in oklab, var(--c-green) 12%, transparent), transparent 36%);
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .event-card-inner {
+      position: relative;
+    }
+
+    .event-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed var(--line-2);
+      margin-bottom: 20px;
+    }
+
+    .event-card h3 {
+      margin: 0 0 4px;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .event-card .sub {
+      color: var(--ink-3);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .event-rows {
+      display: grid;
+      gap: 14px;
+    }
+
+    .event-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+      align-items: baseline;
+    }
+
+    .event-row:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .event-row .k {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .event-row .v {
+      color: var(--ink);
+      font-size: 15px;
+    }
+
+    .event-row .v small {
+      color: var(--ink-3);
+      display: block;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    .event-numbers {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--line-2);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .event-numbers .n {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .event-numbers .l {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 2px;
+    }
+
+    /* ---------- section scaffolding ---------- */
+    section.module {
+      padding: clamp(64px, 9vw, 112px) 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section.module.tinted {
+      background: var(--bg-soft);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: clamp(24px, 5vw, 80px);
+      margin-bottom: clamp(36px, 5vw, 56px);
+      align-items: end;
+    }
+
+    @media (max-width: 760px) {
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-head h2 {
+      margin: 10px 0 0;
+      font-size: clamp(28px, 3.4vw, 42px);
+      letter-spacing: -0.025em;
+      font-weight: 600;
+      line-height: 1.08;
+      text-wrap: balance;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 17px;
+      text-wrap: pretty;
+      max-width: 56ch;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- investor logo grid ---------- */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    @media (max-width: 880px) {
+      .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .logo-cell {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 16px;
+      text-align: center;
+      color: var(--ink-3);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      font-size: 17px;
+      transition: color 160ms ease, background 160ms ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 92px;
+    }
+
+    .logo-cell:hover {
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    .logo-cell .sm {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--ink-3);
+      display: block;
+      margin-top: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .logo-foot {
+      margin-top: 18px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ---------- value props ---------- */
+    .props {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 820px) {
+      .props {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .prop {
+      padding: 36px 28px 36px 0;
+      border-right: 1px solid var(--line);
+      position: relative;
+    }
+
+    .prop:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    @media (max-width: 820px) {
+      .prop {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding-right: 0;
+      }
+
+      .prop:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .prop+.prop {
+      padding-left: 28px;
+    }
+
+    @media (max-width: 820px) {
+      .prop+.prop {
+        padding-left: 0;
+      }
+    }
+
+    .prop-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-3);
+      letter-spacing: 0.08em;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .prop-num .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .prop:nth-child(1) .prop-num .dot {
+      background: var(--c-blue);
+    }
+
+    .prop:nth-child(2) .prop-num .dot {
+      background: var(--c-red);
+    }
+
+    .prop:nth-child(3) .prop-num .dot {
+      background: var(--c-amber);
+    }
+
+    .prop h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .prop p {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 15px;
+      line-height: 1.55;
+      max-width: 38ch;
+    }
+
+    /* ---------- legacy / success ---------- */
+    .legacy {
+      background: var(--bg-deep);
+      color: oklch(0.96 0.004 95);
+      border-bottom: none;
+    }
+
+    .legacy .section-head h2 {
+      color: oklch(0.98 0.004 95);
+    }
+
+    .legacy .section-head p {
+      color: oklch(0.78 0.008 250);
+    }
+
+    .legacy .section-num {
+      color: oklch(0.7 0.008 250);
+    }
+
+    .legacy-feature {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: clamp(24px, 5vw, 64px);
+      align-items: center;
+      border: 1px solid oklch(0.28 0.012 250);
+      border-radius: var(--radius-lg);
+      padding: clamp(28px, 4vw, 44px);
+      background: oklch(0.22 0.012 250);
+    }
+
+    @media (max-width: 820px) {
+      .legacy-feature {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: oklch(0.7 0.008 250);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .feature-tag .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--c-green);
+    }
+
+    .legacy-feature h3 {
+      margin: 0 0 14px;
+      font-size: clamp(28px, 3vw, 38px);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    .legacy-feature p {
+      color: oklch(0.78 0.008 250);
+      margin: 0;
+      font-size: 16px;
+      max-width: 48ch;
+      line-height: 1.6;
+    }
+
+    .legacy-sigil {
+      aspect-ratio: 4 / 3;
+      border: 1px solid oklch(0.32 0.012 250);
+      border-radius: 8px;
+      background:
+        repeating-linear-gradient(45deg,
+          oklch(0.26 0.012 250) 0,
+          oklch(0.26 0.012 250) 1px,
+          transparent 1px,
+          transparent 10px),
+        oklch(0.20 0.012 250);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: oklch(0.6 0.008 250);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 32px;
+      border-top: 1px solid oklch(0.28 0.012 250);
+    }
+
+    @media (max-width: 700px) {
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stat {
+      padding: 28px 24px 28px 0;
+      border-right: 1px solid oklch(0.28 0.012 250);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    @media (max-width: 700px) {
+      .stat {
+        border-right: 0;
+        border-bottom: 1px solid oklch(0.28 0.012 250);
+        padding-right: 0;
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .stat+.stat {
+      padding-left: 24px;
+    }
+
+    @media (max-width: 700px) {
+      .stat+.stat {
+        padding-left: 0;
+      }
+    }
+
+    .stat .big {
+      font-size: clamp(34px, 4vw, 52px);
+      letter-spacing: -0.03em;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .stat .lab {
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: oklch(0.7 0.008 250);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- about pull ---------- */
+    .about-pull {
+      font-size: clamp(20px, 2.2vw, 28px);
+      line-height: 1.4;
+      letter-spacing: -0.015em;
+      max-width: 32ch;
+      color: var(--ink);
+      text-wrap: balance;
+      font-weight: 500;
+    }
+
+    .about-pull em {
+      font-style: normal;
+      color: var(--ink-3);
+    }
+
+    /* ---------- dual CTA ---------- */
+    .dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    @media (max-width: 820px) {
+      .dual {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .dual-card {
+      padding: clamp(28px, 4vw, 48px);
+      background: var(--bg);
+      position: relative;
+    }
+
+    .dual-card+.dual-card {
+      border-left: 1px solid var(--line);
+      background: var(--bg-soft);
+    }
+
+    @media (max-width: 820px) {
+      .dual-card+.dual-card {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+    }
+
+    .dual-card h3 {
+      margin: 16px 0 10px;
+      font-size: clamp(22px, 2.2vw, 28px);
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .dual-card p {
+      margin: 0 0 24px;
+      color: var(--ink-2);
+      max-width: 40ch;
+      font-size: 15px;
+    }
+
+    .dual-card .bullet {
+      margin: 0 0 22px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dual-card .bullet .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .dual-card:nth-child(1) .bullet .dot {
+      background: var(--c-blue);
+    }
+
+    .dual-card:nth-child(2) .bullet .dot {
+      background: var(--c-amber);
+    }
+
+    .req-note {
+      margin-top: 20px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ---------- timeline + venue ---------- */
+    .when-where {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(36px, 5vw, 72px);
+    }
+
+    @media (max-width: 820px) {
+      .when-where {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .timeline {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 16px 0 16px 32px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline li:last-child {
+      border-bottom: 0;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 22px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--ink-3);
+    }
+
+    .timeline li:nth-child(1)::before {
+      border-color: var(--c-blue);
+    }
+
+    .timeline li:nth-child(2)::before {
+      border-color: var(--c-red);
+      background: var(--c-red);
+    }
+
+    .timeline li:nth-child(3)::before {
+      border-color: var(--c-amber);
+    }
+
+    .timeline li:nth-child(4)::before {
+      border-color: var(--c-green);
+    }
+
+    .timeline .t {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+    }
+
+    .timeline .e {
+      font-size: 17px;
+      font-weight: 500;
+      margin-top: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .timeline .d {
+      font-size: 14px;
+      color: var(--ink-2);
+      margin-top: 2px;
+    }
+
+    .venue-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    .map {
+      aspect-ratio: 16 / 11;
+      background:
+        repeating-linear-gradient(90deg,
+          var(--bg-soft) 0,
+          var(--bg-soft) 1px,
+          transparent 1px,
+          transparent 28px),
+        repeating-linear-gradient(0deg,
+          var(--bg-soft) 0,
+          var(--bg-soft) 1px,
+          transparent 1px,
+          transparent 28px),
+        var(--bg);
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .map .road1 {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 38%;
+      width: 2px;
+      background: var(--line-2);
+      transform: rotate(8deg) translateX(-50%);
+      transform-origin: top;
+    }
+
+    .map .road2 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 60%;
+      height: 2px;
+      background: var(--line-2);
+    }
+
+    .map .pin {
+      position: absolute;
+      left: 52%;
+      top: 46%;
+      transform: translate(-50%, -100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .map .pin .head {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--c-red);
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--c-red) 22%, transparent);
+    }
+
+    .map .pin .stem {
+      width: 1px;
+      height: 18px;
+      background: var(--c-red);
+    }
+
+    .map .label {
+      position: absolute;
+      left: 54%;
+      top: 30%;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-2);
+      background: var(--bg);
+      border: 1px solid var(--line);
+      padding: 4px 8px;
+      border-radius: 3px;
+    }
+
+    .map .nlabel {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .venue-meta {
+      padding: 22px 24px;
+      height: 150px;
+    }
+
+    .venue-meta h4 {
+      margin: 0 0 4px;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .venue-meta p {
+      margin: 0;
+      color: var(--ink-2);
+      font-size: 14px;
+    }
+
+    /* ---------- team ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    @media (max-width: 820px) {
+      .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 460px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .person {
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 28px 24px;
+      background: var(--bg);
+      transition: background 160ms ease;
+    }
+
+    .person:hover {
+      background: var(--bg-soft);
+    }
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+    }
+
+    .person:nth-child(1) .avatar {
+      background: var(--c-blue);
+    }
+
+    .person:nth-child(2) .avatar {
+      background: var(--c-red);
+    }
+
+    .person:nth-child(3) .avatar {
+      background: var(--c-amber);
+      color: oklch(0.2 0.012 250);
+    }
+
+    .person:nth-child(4) .avatar {
+      background: var(--c-green);
+    }
+
+    .person h4 {
+      margin: 0 0 4px;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .person .role {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .person p.one {
+      margin: 0 0 18px;
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 3em;
+    }
+
+    .person .lin {
+      font-size: 13px;
+      color: var(--ink-2);
+      border-bottom: 1px solid var(--line-2);
+      padding-bottom: 1px;
+    }
+
+    .person .lin:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .team-note {
+      margin: 0 0 0;
+      color: var(--ink-2);
+      font-size: 17px;
+      max-width: 56ch;
+      text-wrap: pretty;
+    }
+
+    /* ---------- footer ---------- */
+    footer {
+      padding: 56px 0 64px;
+      border-top: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    @media (max-width: 760px) {
+      .foot {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .foot h5 {
+      margin: 0 0 12px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    .foot ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--ink-2);
+    }
+
+    .foot ul a:hover {
+      color: var(--ink);
+    }
+
+    .foot p {
+      color: var(--ink-2);
+      font-size: 14px;
+      max-width: 36ch;
+      margin: 0;
+    }
+
+    .foot-base {
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+      .foot-base {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ---------- tweaks panel ---------- */
+    #tweaks-panel {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 320px;
+      max-height: calc(100vh - 40px);
+      overflow: auto;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 12px 40px -12px rgba(20, 24, 40, 0.18), 0 2px 8px -2px rgba(20, 24, 40, 0.08);
+      z-index: 200;
+      font-family: var(--font-sans);
+      display: none;
+      color: var(--ink);
+    }
+
+    #tweaks-panel.open {
+      display: block;
+    }
+
+    .tw-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+    }
+
+    .tw-head .title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tw-head .title .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--c-blue);
+    }
+
+    .tw-close {
+      background: transparent;
+      border: 1px solid var(--line-2);
+      color: var(--ink-2);
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1;
+      padding: 0;
+    }
+
+    .tw-close:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    .tw-body {
+      padding: 8px 0 14px;
+    }
+
+    .tw-section {
+      padding: 12px 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .tw-section:first-child {
+      border-top: 0;
+    }
+
+    .tw-section h6 {
+      margin: 0 0 10px;
+      font-family: var(--font-mono);
+      font-size: 10px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+    }
+
+    .tw-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 8px 0;
+      font-size: 13px;
+      color: var(--ink-2);
+    }
+
+    .tw-row label {
+      flex: 1;
+    }
+
+    .tw-toggle {
+      appearance: none;
+      width: 32px;
+      height: 18px;
+      border-radius: 999px;
+      background: var(--line-2);
+      position: relative;
+      cursor: pointer;
+      transition: background 120ms ease;
+      flex-shrink: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    .tw-toggle::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: white;
+      transition: transform 140ms ease;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+
+    .tw-toggle:checked {
+      background: var(--ink);
+    }
+
+    .tw-toggle:checked::after {
+      transform: translateX(14px);
+    }
+
+    .tw-seg {
+      display: inline-flex;
+      border: 1px solid var(--line-2);
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .tw-seg button {
+      background: transparent;
+      border: 0;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-family: var(--font-sans);
+      color: var(--ink-2);
+      cursor: pointer;
+      border-left: 1px solid var(--line-2);
+    }
+
+    .tw-seg button:first-child {
+      border-left: 0;
+    }
+
+    .tw-seg button.active {
+      background: var(--ink);
+      color: var(--bg);
+    }
+
+    .tw-text {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--line-2);
+      border-radius: 4px;
+      font-size: 13px;
+      font-family: var(--font-sans);
+      color: var(--ink);
+      background: var(--bg);
+      resize: vertical;
+      min-height: 38px;
+    }
+
+    .tw-text:focus {
+      outline: 2px solid var(--c-blue);
+      outline-offset: -1px;
+      border-color: transparent;
+    }
+
+    .tw-color-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+
+    .tw-color-row label {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      color: var(--ink-3);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .tw-color-row input[type=color] {
+      width: 100%;
+      height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--bg);
+      cursor: pointer;
+      padding: 2px;
+    }
+
+    /* ---------- modes ---------- */
+    body.density-compact .hero {
+      padding: 56px 0 48px;
+    }
+
+    body.density-compact section.module {
+      padding: 56px 0;
+    }
+
+    body.layout-centered .hero-grid {
+      grid-template-columns: 1fr;
+      max-width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    body.layout-centered .hero-grid .lede {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    body.layout-centered .hero-grid .pills {
+      justify-content: center;
+    }
+
+    body.layout-centered .hero-grid .hero-ctas {
+      justify-content: center;
+    }
+
+    body.layout-centered .event-card {
+      display: none;
+    }
+
+    body.no-accents .pill .dot,
+    body.no-accents .prop .prop-num .dot,
+    body.no-accents .dual-card .bullet .dot,
+    body.no-accents .timeline li::before,
+    body.no-accents .feature-tag .dot,
+    body.no-accents .map .pin .head,
+    body.no-accents .map .pin .stem,
+    body.no-accents .brand-mark span {
+      background: var(--ink-3) !important;
+      border-color: var(--ink-3) !important;
+      box-shadow: none !important;
+    }
+
+    body.no-accents .person:nth-child(1) .avatar,
+    body.no-accents .person:nth-child(2) .avatar,
+    body.no-accents .person:nth-child(3) .avatar,
+    body.no-accents .person:nth-child(4) .avatar {
+      background: var(--ink) !important;
+      color: var(--bg) !important;
+    }
+
+    body.no-accents h1.headline em {
+      background: none;
+      -webkit-text-fill-color: var(--ink);
+      color: var(--ink);
+    }
+
+    body.no-accents .event-card::before {
+      display: none;
+    }
+
+    body.dark {
+      --bg: oklch(0.16 0.012 250);
+      --bg-soft: oklch(0.20 0.012 250);
+      --bg-deep: oklch(0.10 0.012 250);
+      --ink: oklch(0.96 0.004 95);
+      --ink-2: oklch(0.78 0.008 250);
+      --ink-3: oklch(0.58 0.008 250);
+      --line: oklch(0.28 0.012 250);
+      --line-2: oklch(0.36 0.012 250);
+    }
+
+    body.dark .btn-solid {
+      background: var(--ink);
+      color: oklch(0.12 0.012 250);
+    }
+
+    body.dark .btn-solid:hover {
+      background: oklch(0.92 0.004 95);
+    }
+
+    body.dark .legacy {
+      background: oklch(0.08 0.012 250);
+    }
+
+    body.dark .legacy-feature {
+      background: oklch(0.14 0.012 250);
+      border-color: oklch(0.24 0.012 250);
+    }
+
+    body.dark .person:nth-child(3) .avatar {
+      color: oklch(0.18 0.012 250);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+     STICKY NAV
+========================================================== -->
+  <header class="nav" data-screen-label="00 Nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span>Xoogler Demo Day</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#why">Why this matters</a>
+        <a href="#legacy">Legacy</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#team">Team</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#rsvp">Investor RSVP</a>
+        <a class="btn btn-solid" target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdzmhbSe3000BQdADOPMypEkDoqp8gkikRf_MXPddntfL0T6g/viewform">Apply
+          to Pitch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+     HERO
+========================================================== -->
+  <section class="hero" id="top" data-screen-label="01 Hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">
+          <span class="bar"></span>
+          Bangalore Edition · June 2026
+        </span>
+        <h1 class="headline" data-headline>Xoogler Demo Day<br />arriving in <em>Bangalore.</em></h1>
+        <p class="lede" data-lede>Elite Xoogler-led startups. Top-tier funds. One high-signal afternoon at
+          Google Ananta.</p>
+
+        <div class="pills">
+          <span class="pill pill-date"><span class="dot"></span>Thu, June 25, 2026</span>
+          <span class="pill pill-time"><span class="dot"></span>4:00 — 7:00 PM IST</span>
+          <a href="https://maps.app.goo.gl/4LXiNPPcjoZNNtxy8" target="_blank"> <span class="pill pill-place"><span
+                class="dot"></span>Google Ananta ·
+              Mahadevapura</span></a>
+        </div>
+
+        <div class="hero-ctas">
+          <a class="btn btn-solid btn-lg" target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdzmhbSe3000BQdADOPMypEkDoqp8gkikRf_MXPddntfL0T6g/viewform">Apply
+            to Pitch →</a>
+          <a class="btn btn-ghost btn-lg" href="#rsvp">Investor RSVP</a>
+        </div>
+
+        <p class="hero-aside-note">
+          For ongoing updates, join the <a href="https://forms.gle/5V1kUtBx1Dk6CUXs6" target="_blank">Xoogler India
+            WhatsApp group</a>.
+        </p>
+      </div>
+
+      <aside class="event-card" aria-label="Event summary">
+        <div class="event-card-inner">
+          <div class="event-card-top">
+            <span>Demo Day </span>
+            <span>Bangalore Edition</span>
+          </div>
+          <h3>An afternoon, calibrated.</h3>
+          <p class="sub">No fluff. Ten pitches, multiple funds, in the room.</p>
+
+          <div class="event-rows">
+            <div class="event-row">
+              <span class="k">Date</span>
+              <span class="v">June 25, 2026<small>Thursday</small></span>
+            </div>
+            <div class="event-row">
+              <span class="k">Time</span>
+              <span class="v">4:00 — 7:00 PM<small>India Standard Time</small></span>
+            </div>
+            <div class="event-row">
+              <span class="k">Venue</span>
+              <span class="v">Google Ananta<small>Mahadevapura, Bangalore</small></span>
+            </div>
+            <div class="event-row">
+              <span class="k">Format</span>
+              <span class="v">Closed-door<small>Founders + invited investors only</small></span>
+            </div>
+          </div>
+
+          <div class="event-numbers">
+            <div>
+              <div class="n">12</div>
+              <div class="l">Founders</div>
+            </div>
+            <div>
+              <div class="n">4+</div>
+              <div class="l">Lead Funds</div>
+            </div>
+            <div>
+              <div class="n">3 hr</div>
+              <div class="l">Format</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     INVESTOR PANEL
+========================================================== -->
+  <section class="module" id="conviction" data-screen-label="02 Conviction Room">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">02 · Conviction Room</span>
+          <h2>The institutional leaders in&nbsp;the room.</h2>
+        </div>
+        <p>Each fund sends a partner-level investor with active early-stage allocation in 2026. No associates, no
+          interns — direct conviction-level conversations.</p>
+      </div>
+
+      <div class="logo-grid">
+        <div class="logo-cell">Blume<span class="sm">Ventures</span></div>
+        <div class="logo-cell">Peak XV<span class="sm">Partners</span></div>
+        <div class="logo-cell">Rainmatter<span class="sm">By Zerodha</span></div>
+        <div class="logo-cell">Venture<span class="sm">Catalysts</span></div>
+        <div class="logo-cell">888<span class="sm">Capital VC</span></div>
+        <div class="logo-cell">March<span class="sm">Capital</span></div>
+      </div>
+      <p class="logo-foot">+ select angels &amp; family offices · roster expanding</p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     VALUE PROPS
+========================================================== -->
+  <section class="module tinted" id="why" data-screen-label="03 Why">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">03 · Why this matters</span>
+          <h2>A different kind of demo&nbsp;day.</h2>
+        </div>
+        <p class="about-pull">
+          Every presenter has operated at the highest level inside Google — building products at scale, leading large
+          teams. <em>These aren't first-time experimenters.</em> Bangalore is home to a fast-growing cluster of
+          ex-Google founders building globally competitive companies. This is your front-row seat.
+        </p>
+      </div>
+
+      <div class="props">
+        <article class="prop">
+          <div class="prop-num"><span class="dot"></span>01 · Pedigree</div>
+          <h3>Google-pedigreed founders.</h3>
+          <p>Pre-vetted builders who've shipped products at global scale and led teams that operated under the highest
+            engineering and product standards.</p>
+        </article>
+        <article class="prop">
+          <div class="prop-num"><span class="dot"></span>02 · Track record</div>
+          <h3>Proven deal flow.</h3>
+          <p>Past editions surfaced startups that went on to raise from a16z, Sequoia and Accel. The signal compounds
+            with every cohort.</p>
+        </article>
+        <article class="prop">
+          <div class="prop-num"><span class="dot"></span>03 · Network</div>
+          <h3>Build your network.</h3>
+          <p>Connect with the next generation of category-defining founders and high-quality talent in one room. It’s
+            the ultimate high-signal environment for proactive investors.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     LEGACY / SUCCESS WALL
+========================================================== -->
+  <section class="module legacy" id="legacy" data-screen-label="04 Legacy">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">04 · Legacy</span>
+          <h2>From Xoogler Demo Day to&nbsp;global scale.</h2>
+        </div>
+        <p>The format is small by design. The outcomes haven't been.</p>
+      </div>
+
+      <div class="legacy-feature">
+        <div>
+          <div class="feature-tag"><span class="dot"></span>Featured alumnus · 2017</div>
+          <h3>Solana started at a Xoogler Demo Day.</h3>
+          <p>Anatoly Yakovenko presented an early version of what became Solana to a Xoogler audience. Today the network
+            is one of the largest L1 ecosystems in the world. Same room. Same format. Different outcomes.</p>
+        </div>
+        <div class="legacy-sigil" aria-hidden="true">
+          <img src="solana.jpeg" alt="Solana Logo" />
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat">
+          <div class="big">$250M+</div>
+          <div class="lab">Raised by alumni</div>
+        </div>
+        <div class="stat">
+          <div class="big">12+</div>
+          <div class="lab">Countries represented</div>
+        </div>
+        <div class="stat">
+          <div class="big">Series A+</div>
+          <div class="lab">Stage focus, exits-track</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     DUAL CTA
+========================================================== -->
+  <section class="module" id="apply" data-screen-label="05 CTAs">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">05 · Get involved</span>
+          <h2>Two ways into the room.</h2>
+        </div>
+        <p>Applications close two weeks before the event. Cohort and investor seats fill quickly — earlier the better.
+        </p>
+      </div>
+
+      <div class="dual">
+        <div class="dual-card">
+          <div class="bullet"><span class="dot"></span>For founders</div>
+          <h3>Are you a Xoogler building for the future?</h3>
+          <p>Ten seats. Six minutes on stage. A direct line to partner-level conviction in the room.</p>
+          <a class="btn btn-solid btn-lg"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdzmhbSe3000BQdADOPMypEkDoqp8gkikRf_MXPddntfL0T6g/viewform"
+            target="_blank"> Apply to Pitch →</a>
+          <p class="req-note">Requires ex-Google tenure · 10%+ equity in venture</p>
+        </div>
+        <div class="dual-card" id="rsvp">
+          <div class="bullet"><span class="dot"></span>For investors</div>
+          <h3>Institutional or angel investor?</h3>
+          <p>Limited investor seats. Curated cohort. We'll send the lineup forty-eight hours before the event.</p>
+          <a class="btn btn-ghost btn-lg" href="#">Investor RSVP →</a>
+          <p class="req-note">By invitation · partner-level only</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     SCHEDULE + VENUE
+========================================================== -->
+  <section class="module tinted" id="schedule" data-screen-label="06 Schedule & Venue">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">06 · When &amp; where</span>
+          <h2>Three hours, in&nbsp;Mahadevapura.</h2>
+        </div>
+        <p>Doors at four. Pitches at half past. Networking from six. We end on time.</p>
+      </div>
+
+      <div class="when-where">
+        <ol class="timeline">
+          <li>
+            <span class="t">04:00 PM</span>
+            <div class="e">Registration &amp; arrival</div>
+            <div class="d">Coffee, badges, first introductions in the foyer.</div>
+          </li>
+          <li>
+            <span class="t">04:30 PM</span>
+            <div class="e">Pitches begin</div>
+            <div class="d">Ten founders. Six minutes each. One round of curated Q&amp;A.</div>
+          </li>
+          <li>
+            <span class="t">06:00 PM</span>
+            <div class="e">Networking &amp; meet-the-fund</div>
+            <div class="d">Open floor with investors, mentors and Xoogler alumni.</div>
+          </li>
+          <li>
+            <span class="t">07:00 PM</span>
+            <div class="e">Doors close</div>
+            <div class="d">Sharp. Follow-ups continue offline.</div>
+          </li>
+        </ol>
+
+        <div class="venue-card">
+          <!-- <div class="map" aria-hidden="true"> -->
+          <iframe width="100%" height="70%"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3269.329751573614!2d77.68865834777326!3d12.977625872414233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae11005f110871%3A0xd37a52fabc4e9308!2sGoogle%20Ananta!5e0!3m2!1sen!2sin!4v1777719417662!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- </div> -->
+          <div class="venue-meta">
+            <h4>Google Ananta Campus</h4>
+            <p>Outer Ring Road, Mahadevapura, Bangalore 560048. Parking on-site. Closest metro: Garudacharapalya (Purple
+              Line).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     TEAM
+========================================================== -->
+  <section class="module" id="team" data-screen-label="07 Team">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num">07 · Team</span>
+          <h2>Volunteer-run. By&nbsp;Xooglers, for&nbsp;Xooglers.</h2>
+        </div>
+        <p class="team-note">Everyone involved is donating their time because they want to see this ecosystem grow. If
+          you see cracks — please step in.</p>
+      </div>
+
+      <div class="team-grid">
+        <article class="person">
+          <div class="avatar"><img src="nupur.png" alt="Nupur Dave" /></div>
+          <h4>Nupur Dave</h4>
+          <p class="one">Nupur helps NRIs participate in India. An author of three books. She has also been a TPM/Chief
+            of Staff before.</p>
+          <a class="lin" href="https://www.linkedin.com/in/nupurdave/">LinkedIn ↗</a>
+        </article>
+        <article class="person">
+          <div class="avatar"><img src="samvidha_sinha.jpeg" alt="Samvidha Sinha" /></div>
+          <h4>Samvidha Sinha</h4>
+          <p class="one">Runs investor relationships and the conviction-side of the room.</p>
+          <a class="lin" href="https://www.linkedin.com/in/samvidhas/">LinkedIn ↗</a>
+        </article>
+        <article class="person">
+          <div class="avatar"><img src="sachin_jain.jpeg" alt="Sachin Jain" /></div>
+          <h4>Sachin Jain</h4>
+          <p class="one">Owns logistics, venue and the run-of-show on the day itself.</p>
+          <a class="lin" href="https://www.linkedin.com/in/sachinjain619/">LinkedIn ↗</a>
+        </article>
+        <article class="person">
+          <div class="avatar"><img src="saurabh_minni.jpeg" alt="Saurabh Minni" /></div>
+          <h4>Saurabh Minni</h4>
+          <p class="one">Building affordable and accessible healthcare for all at <a href="https://sudama.org"
+              target="_blank">Sudama Health</a>. Previously helped build Google Docs, GPay, Assistant and Gemini.</p>
+          <a class="lin" href="https://www.linkedin.com/in/100rabh/">LinkedIn ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+     FOOTER
+========================================================== -->
+  <footer data-screen-label="08 Footer">
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a class="brand" href="#top">
+            <span class="brand-mark" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+            </span>
+            <span>Xoogler Demo Day · Bangalore</span>
+          </a>
+          <p style="margin-top: 14px;">A volunteer-organised gathering of ex-Google founders, builders and the funds
+            that back them. Bangalore Edition · June 2026.</p>
+        </div>
+        <div>
+          <h5>Event</h5>
+          <ul>
+            <li><a target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdzmhbSe3000BQdADOPMypEkDoqp8gkikRf_MXPddntfL0T6g/viewform">Apply
+                to pitch</a></li>
+            <li><a href="#rsvp">Investor RSVP</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#legacy">Past editions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Community</h5>
+          <ul>
+            <li><a href="https://forms.gle/5V1kUtBx1Dk6CUXs6">Xoogler India WhatsApp</a></li>
+            <li><a href="#">LinkedIn group</a></li>
+            <li><a href="#team">Organising team</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="foot-base">
+        <span>© 2026 Xoogler Demo Day Bangalore · Independent &amp; volunteer-run</span>
+        <span>Bangalore · IST</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+     TWEAKS PANEL
+========================================================== -->
+  <aside id="tweaks-panel" aria-label="Tweaks">
+    <div class="tw-head">
+      <div class="title"><span class="dot"></span>Tweaks</div>
+      <button class="tw-close" id="tw-close" aria-label="Close tweaks">×</button>
+    </div>
+    <div class="tw-body">
+      <div class="tw-section">
+        <h6>Theme</h6>
+        <div class="tw-row">
+          <label for="tw-dark">Dark mode</label>
+          <input type="checkbox" id="tw-dark" class="tw-toggle" />
+        </div>
+        <div class="tw-row">
+          <label for="tw-accents">Color accents</label>
+          <input type="checkbox" id="tw-accents" class="tw-toggle" checked />
+        </div>
+      </div>
+
+      <div class="tw-section">
+        <h6>Hero layout</h6>
+        <div class="tw-row">
+          <label>Layout</label>
+          <div class="tw-seg" id="tw-layout">
+            <button data-val="split" class="active">Split</button>
+            <button data-val="centered">Centered</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tw-section">
+        <h6>Density</h6>
+        <div class="tw-row">
+          <label>Spacing</label>
+          <div class="tw-seg" id="tw-density">
+            <button data-val="airy" class="active">Airy</button>
+            <button data-val="compact">Compact</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tw-section">
+        <h6>Hero copy</h6>
+        <div class="tw-row" style="display:block;">
+          <label for="tw-headline"
+            style="display:block;margin-bottom:6px;font-size:11px;color:var(--ink-3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.08em;">Headline</label>
+          <textarea class="tw-text" id="tw-headline" rows="2">Xoogler Demo Day arriving in Bangalore.</textarea>
+        </div>
+        <div class="tw-row" style="display:block;margin-top:10px;">
+          <label for="tw-lede"
+            style="display:block;margin-bottom:6px;font-size:11px;color:var(--ink-3);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.08em;">Sub-head</label>
+          <textarea class="tw-text" id="tw-lede"
+            rows="3">Twelve elite Xoogler-led startups. Four top-tier funds. One high-signal afternoon at Google Ananta.</textarea>
+        </div>
+      </div>
+
+      <div class="tw-section">
+        <h6>Accent palette</h6>
+        <div class="tw-color-row">
+          <label>Blue<input type="color" id="tw-c-blue" value="#5b8def" /></label>
+          <label>Red<input type="color" id="tw-c-red" value="#e06b6b" /></label>
+          <label>Amber<input type="color" id="tw-c-amber" value="#e8b94e" /></label>
+          <label>Green<input type="color" id="tw-c-green" value="#5fa970" /></label>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    (function () {
+      const DEFAULTS = /*EDITMODE-BEGIN*/{
+        "dark": false,
+        "accents": true,
+        "layout": "split",
+        "density": "airy",
+        "headline": "Xoogler Demo Day arriving in Bangalore.",
+        "lede": "Ten elite Xoogler-led startups. Top-tier funds. One high-signal afternoon at Google Ananta.",
+        "cBlue": "#5b8def",
+        "cRed": "#e06b6b",
+        "cAmber": "#e8b94e",
+        "cGreen": "#5fa970"
+      }/*EDITMODE-END*/;
+
+      const state = Object.assign({}, DEFAULTS);
+      const panel = document.getElementById('tweaks-panel');
+      const body = document.body;
+
+      // --- listener FIRST, then announce
+      window.addEventListener('message', function (e) {
+        const d = e.data || {};
+        if (d.type === '__activate_edit_mode') panel.classList.add('open');
+        if (d.type === '__deactivate_edit_mode') panel.classList.remove('open');
+      });
+      try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (_) { }
+
+      document.getElementById('tw-close').addEventListener('click', function () {
+        panel.classList.remove('open');
+        try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (_) { }
+      });
+
+      function persist(patch) {
+        try { window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*'); } catch (_) { }
+      }
+      function set(key, val) {
+        state[key] = val;
+        apply();
+        const patch = {}; patch[key] = val; persist(patch);
+      }
+
+      function applyHeadline(text) {
+        const el = document.querySelector('[data-headline]');
+        if (!el) return;
+        // re-emphasise final clause if it contains "Bangalore"
+        const t = (text || '').trim();
+        const m = t.match(/^(.*?)(arriving in\s+)?(bangalore[.!?]?)\s*$/i);
+        if (m) {
+          const pre = (m[1] || '').trim();
+          const mid = (m[2] || '').trim();
+          const tail = m[3];
+          el.innerHTML = (pre ? pre.replace(/[,]?\s*$/, '') : '') +
+            (pre ? '<br/>' : '') +
+            (mid ? mid + ' ' : '') +
+            '<em>' + tail + '</em>';
+        } else {
+          el.textContent = t;
+        }
+      }
+
+      function apply() {
+        body.classList.toggle('dark', !!state.dark);
+        body.classList.toggle('no-accents', !state.accents);
+        body.classList.toggle('layout-centered', state.layout === 'centered');
+        body.classList.toggle('density-compact', state.density === 'compact');
+
+        // segmented buttons
+        document.querySelectorAll('#tw-layout button').forEach(b => {
+          b.classList.toggle('active', b.dataset.val === state.layout);
+        });
+        document.querySelectorAll('#tw-density button').forEach(b => {
+          b.classList.toggle('active', b.dataset.val === state.density);
+        });
+
+        // text
+        applyHeadline(state.headline);
+        const lede = document.querySelector('[data-lede]');
+        if (lede) lede.textContent = state.lede;
+
+        // colors via CSS vars
+        const root = document.documentElement;
+        root.style.setProperty('--c-blue', state.cBlue);
+        root.style.setProperty('--c-red', state.cRed);
+        root.style.setProperty('--c-amber', state.cAmber);
+        root.style.setProperty('--c-green', state.cGreen);
+      }
+
+      // wire inputs
+      document.getElementById('tw-dark').addEventListener('change', e => set('dark', e.target.checked));
+      document.getElementById('tw-accents').addEventListener('change', e => set('accents', e.target.checked));
+      document.querySelectorAll('#tw-layout button').forEach(b => {
+        b.addEventListener('click', () => set('layout', b.dataset.val));
+      });
+      document.querySelectorAll('#tw-density button').forEach(b => {
+        b.addEventListener('click', () => set('density', b.dataset.val));
+      });
+      document.getElementById('tw-headline').addEventListener('input', e => set('headline', e.target.value));
+      document.getElementById('tw-lede').addEventListener('input', e => set('lede', e.target.value));
+      document.getElementById('tw-c-blue').addEventListener('input', e => set('cBlue', e.target.value));
+      document.getElementById('tw-c-red').addEventListener('input', e => set('cRed', e.target.value));
+      document.getElementById('tw-c-amber').addEventListener('input', e => set('cAmber', e.target.value));
+      document.getElementById('tw-c-green').addEventListener('input', e => set('cGreen', e.target.value));
+
+      // sync inputs to defaults
+      document.getElementById('tw-dark').checked = state.dark;
+      document.getElementById('tw-accents').checked = state.accents;
+      document.getElementById('tw-headline').value = state.headline;
+      document.getElementById('tw-lede').value = state.lede;
+      document.getElementById('tw-c-blue').value = state.cBlue;
+      document.getElementById('tw-c-red').value = state.cRed;
+      document.getElementById('tw-c-amber').value = state.cAmber;
+      document.getElementById('tw-c-green').value = state.cGreen;
+
+      apply();
+    })();
+  </script>
+
+</body>
+
+</html>
